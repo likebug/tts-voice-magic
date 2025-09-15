@@ -1160,7 +1160,7 @@ const HTML_PAGE = `
                                     </svg>
                                 </div>
                                 <p class="file-drop-text">拖拽音频文件到此处，或点击选择文件</p>
-                                <p class="file-drop-hint">支持mp3、wav、m4a、flac、aac、ogg、webm、amr、3gp格式，最大100MB</p>
+                                <p class="file-drop-hint">支持mp3、wav、m4a、flac、aac、ogg、webm、amr、3gp格式，最大200MB</p>
                             </div>
                             <input type="file" id="audioFileInput" accept=".mp3,.wav,.m4a,.flac,.aac,.ogg,.webm,.amr,.3gp,audio/*" style="display: none;">
                         </div>
@@ -1891,9 +1891,9 @@ const HTML_PAGE = `
                 return;
             }
 
-            // 验证文件大小（限制为100MB）
-            if (file.size > 100 * 1024 * 1024) {
-                alert('音频文件大小不能超过100MB');
+            // 验证文件大小（限制为200MB）
+            if (file.size > 200 * 1024 * 1024) {
+                alert('音频文件大小不能超过200MB');
                 return;
             }
 
@@ -2801,11 +2801,11 @@ async function handleAudioTranscription(request) {
             });
         }
 
-        // 验证文件大小（限制为100MB）
-        if (audioFile.size > 100 * 1024 * 1024) {
+        // 验证文件大小（限制为200MB）
+        if (audioFile.size > 200 * 1024 * 1024) {
             return new Response(JSON.stringify({
                 error: {
-                    message: "音频文件大小不能超过100MB",
+                    message: "音频文件大小不能超过200MB",
                     type: "invalid_request_error",
                     param: "file",
                     code: "file_too_large"
