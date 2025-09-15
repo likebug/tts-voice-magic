@@ -1160,7 +1160,7 @@ const HTML_PAGE = `
                                     </svg>
                                 </div>
                                 <p class="file-drop-text">拖拽音频文件到此处，或点击选择文件</p>
-                                <p class="file-drop-hint">支持mp3、wav、m4a、flac、aac、ogg、webm、amr、3gp格式，最大10MB</p>
+                                <p class="file-drop-hint">支持mp3、wav、m4a、flac、aac、ogg、webm、amr、3gp格式，最大100MB</p>
                             </div>
                             <input type="file" id="audioFileInput" accept=".mp3,.wav,.m4a,.flac,.aac,.ogg,.webm,.amr,.3gp,audio/*" style="display: none;">
                         </div>
