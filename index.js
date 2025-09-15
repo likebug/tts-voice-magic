@@ -2801,11 +2801,11 @@ async function handleAudioTranscription(request) {
             });
         }
 
-        // 验证文件大小（限制为10MB）
-        if (audioFile.size > 10 * 1024 * 1024) {
+        // 验证文件大小（限制为100MB）
+        if (audioFile.size > 100 * 1024 * 1024) {
             return new Response(JSON.stringify({
                 error: {
-                    message: "音频文件大小不能超过10MB",
+                    message: "音频文件大小不能超过100MB",
                     type: "invalid_request_error",
                     param: "file",
                     code: "file_too_large"
