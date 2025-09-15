@@ -1891,9 +1891,9 @@ const HTML_PAGE = `
                 return;
             }
 
-            // 验证文件大小（限制为10MB）
-            if (file.size > 10 * 1024 * 1024) {
-                alert('音频文件大小不能超过10MB');
+            // 验证文件大小（限制为100MB）
+            if (file.size > 100 * 1024 * 1024) {
+                alert('音频文件大小不能超过100MB');
                 return;
             }
 
